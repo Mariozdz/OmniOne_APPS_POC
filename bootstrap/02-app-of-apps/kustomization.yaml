@@ -1,2 +1,2 @@
 resources:
-  - ../infrastructure/argocd/app-of-apps
+  - ../../infrastructure/argocd/app-of-apps

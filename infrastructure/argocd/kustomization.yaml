@@ -1,3 +1,0 @@
-resources:
-  - install          # carpeta de instalación de Argo CD
-  - app-of-apps      # carpeta con kustomization.yaml y app-of-apps.yaml

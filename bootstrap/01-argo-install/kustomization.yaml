@@ -1,2 +1,2 @@
 resources:
-  - ../infrastructure/argocd/install
+  - ../../infrastructure/argocd/install

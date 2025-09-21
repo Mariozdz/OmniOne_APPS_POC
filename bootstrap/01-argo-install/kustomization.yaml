@@ -1,3 +1,2 @@
 resources:
   - ../infrastructure/argocd/install
-  - ../infrastructure/argocd/app-of-apps.yaml

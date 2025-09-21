@@ -1,3 +1,2 @@
 resources:
-  - install
   - app-of-apps.yaml

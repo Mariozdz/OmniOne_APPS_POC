@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: flask-app-dev
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/Mariozdz/OmniOne_APPS_POC.git
+    targetRevision: HEAD
+    path: apps/flask-app/overlays/dev
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: flask-dev
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
+    syncOptions:
+    - CreateNamespace=true

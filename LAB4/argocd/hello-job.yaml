@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: hello-job
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/Mariozdz/OmniOne_APPS_POC.git
+    targetRevision: HEAD
+    path: apps/hello-job/overlays/dev
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: myapp
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true

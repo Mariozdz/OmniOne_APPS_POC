@@ -1,0 +1,4 @@
+resources:
+  - flask-app-dev.yaml
+  # - hello-job.yaml
+  # - flask-app-prod.yaml

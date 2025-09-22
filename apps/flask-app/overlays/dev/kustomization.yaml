@@ -1,5 +1,5 @@
 resources:
-  - ../../base
+  - apps/flask-app/base
 
-patchesStrategicMerge:
-  - patch-deployment.yaml
+# patchesStrategicMerge:
+#   - patch-deployment.yaml

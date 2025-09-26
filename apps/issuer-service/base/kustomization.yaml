@@ -2,3 +2,5 @@ resources:
   - namespace.yaml
   - deployment.yaml
   - service.yaml
+  - network-default-deny.yaml
+  - network-default-allow-wallet.yaml

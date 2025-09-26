@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: wallet-service
+  namespace: wallet-services-ns
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: wallet-service
+  template:
+    metadata:
+      labels:
+        app: wallet-service
+    spec:
+      containers:
+        - name: wallet-service
+          image: linuxserver/openssh-server
+          ports:
+            - containerPort: 2222
+          env:
+            - name: PUID
+              value: "1000"
+            - name: PGID
+              value: "1000"
+            - name: PASSWORD_ACCESS
+              value: "true"
+            - name: USER_PASSWORD
+              value: "test123"
+            - name: USER_NAME
+              value: "demo"

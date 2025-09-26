@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: issuer-service
+  namespace: issuer-service-ns
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: issuer-service
+  template:
+    metadata:
+      labels:
+        app: issuer-service
+    spec:
+      containers:
+        - name: issuer-service
+          image: linuxserver/openssh-server
+          ports:
+            - containerPort: 2222
+          env:
+            - name: PUID
+              value: "1000"
+            - name: PGID
+              value: "1000"
+            - name: PASSWORD_ACCESS
+              value: "true"
+            - name: USER_PASSWORD
+              value: "test123"
+            - name: USER_NAME
+              value: "demo"

@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: issuer-service
+  namespace: issuer-service-ns
+spec:
+  selector:
+    app: issuer-service
+  ports:
+    - protocol: TCP
+      port: 22
+      targetPort: 2222

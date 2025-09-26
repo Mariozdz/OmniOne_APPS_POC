@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://your-repo-url.git
+    repoURL: https://github.com/Mariozdz/OmniOne_APPS_POC.git
     targetRevision: main
     path: apps/wallet-service/base
   destination:

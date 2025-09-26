@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: wallet-service-ingress
+  namespace: wallet-services-ns
+spec:
+  rules:
+    - host: wallet.local
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: wallet-service
+                port:
+                  number: 22
